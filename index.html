@@ -225,9 +225,8 @@ function render(){
 function detail(it){
   function f(l,v,m){return '<div><dt>'+l+'</dt><dd'+(m?' class="m"':'')+'>'+(v?esc(v):'—')+'</dd></div>'}
   return '<div class="detail"><dl>'+
-    f('Codice',it.codice,1)+f('Descrizione',it.desc)+f('Foglio',it.sheet)+f('Lista',it.descLista)+f('Codice lista',it.codLista,1)+
-    f('Tipo lista',it.tipo)+f('Codice fornitore',it.forn,1)+f('Protocollo',it.prot,1)+
-    f('Validità lista',(it.inizio||'?')+' → '+(it.fine||'?'))+f('Data creazione',it.creata)+
+    f('Codice',it.codice,1)+f('Descrizione',it.desc)+f('Foglio',it.sheet)+f('Lista',it.descLista)+
+    f('Codice fornitore',it.forn,1)+f('Protocollo',it.prot,1)+
     '</dl><button type="button" class="copy" data-code="'+esc(it.codice)+'">Copia codice</button></div>';
 }
 
